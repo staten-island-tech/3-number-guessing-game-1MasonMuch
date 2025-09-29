@@ -27,12 +27,14 @@
 import random 
 number = random.randint(1,10)
 answer = 0
-guess_history = int([])
+guess_history = []
 while answer != number:
+     
      answer = int(input("Please guess a number 1-10"))
+     guess_history.append(answer)
      if answer > number:
-          print("Lower")
+          print(f"Lower than {answer}")
+          print(f"Your previous answers were {guess_history}")
      elif answer < number:
-          print("Higher")
-     guess_history.append[answer]
-print(f"You got it! Your previous answers were {guess_history} ")
+          print(f"Higher than {answer}")
+          print(f"Your previous answers were {guess_history}")
